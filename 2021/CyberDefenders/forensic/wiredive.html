@@ -1,0 +1,640 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>WireDive (forensic, 6275) · exti0p's realm</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.7.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../SocVel/" />
+    
+    
+    <link rel="prev" href="../DFIR/honeybot.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    2021
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../CSAW-CTF-Quals/">
+            
+                <a href="../../CSAW-CTF-Quals/">
+            
+                    
+                      CSAW CTF Quals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../CSAW-CTF-Quals/ics/tripping_breakers.html">
+            
+                <a href="../../CSAW-CTF-Quals/ics/tripping_breakers.html">
+            
+                    
+                    Tripping Breakers (malware analysis, 481)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../FwordCTF/">
+            
+                <a href="../../FwordCTF/">
+            
+                    
+                      FwordCTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../FwordCTF/web/parrotox.html">
+            
+                <a href="../../FwordCTF/web/parrotox.html">
+            
+                    
+                    ParrotOx (web, 997)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                      CyberDefenders
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../DFIR/honeybot.html">
+            
+                <a href="../DFIR/honeybot.html">
+            
+                    
+                    HoneyBOT (DFIR & malware analysis, 1700)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="wiredive.html">
+            
+                <a href="wiredive.html">
+            
+                    
+                    WireDive (forensic, 6275)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../SocVel/">
+            
+                <a href="../../SocVel/">
+            
+                    
+                      SocVel
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../SocVel/DFIR/losprys.html">
+            
+                <a href="../../SocVel/DFIR/losprys.html">
+            
+                    
+                    Losprys (DFIR, 3000)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../SocVel/DFIR/dikbek.html">
+            
+                <a href="../../SocVel/DFIR/dikbek.html">
+            
+                    
+                    DikBek (DFIR, 3000)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../SocVel/DFIR/pooptoria.html">
+            
+                <a href="../../SocVel/DFIR/pooptoria.html">
+            
+                    
+                    Pooptoria (DFIR, 3000)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../FCSC/">
+            
+                <a href="../../FCSC/">
+            
+                    
+                      FCSC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../FCSC/forensic/ordiphone-0.html">
+            
+                <a href="../../FCSC/forensic/ordiphone-0.html">
+            
+                    
+                    Ordiphone0 (forensic, 42)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../FCSC/forensic/ordiphone-2.html">
+            
+                <a href="../../FCSC/forensic/ordiphone-2.html">
+            
+                    
+                    Ordiphone2 (forensic, 197)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../NorzhCTF/">
+            
+                <a href="../../NorzhCTF/">
+            
+                    
+                      NorzhCTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../NorzhCTF/airport_hall/triskel-3.html">
+            
+                <a href="../../NorzhCTF/airport_hall/triskel-3.html">
+            
+                    
+                    Triskel 3 (web, 49)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../NorzhCTF/airport_hall/triskel-4.html">
+            
+                <a href="../../NorzhCTF/airport_hall/triskel-4.html">
+            
+                    
+                    Triskel 4 (pentest & misc, 20)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../NorzhCTF/developer_corner/tea_time.html">
+            
+                <a href="../../NorzhCTF/developer_corner/tea_time.html">
+            
+                    
+                    Tea time (pentest, 20)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../2020/">
+            
+                <a href="../../../2020/">
+            
+                    
+                    2020
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../2020/FwordCTF/">
+            
+                <a href="../../../2020/FwordCTF/">
+            
+                    
+                      FwordCTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../../2020/FwordCTF/web/jailoo-warmup.html">
+            
+                <a href="../../../2020/FwordCTF/web/jailoo-warmup.html">
+            
+                    
+                    Jailoo Warmup (web, 442)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >WireDive (forensic, 6275)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="wiredive">WireDive</h1>
+<h2 id="forensic-6275-points">Forensic, 6275 points</h2>
+<h3 id="description">Description</h3>
+<p>WireDive is a combo traffic analysis exercise that contains various traces to help you understand how different protocols look on the wire.</p>
+<p>Author: <a href="https://twitter.com/webernetz" target="_blank">DFA and Johannes Weber</a></p>
+<h3 id="solution">Solution</h3>
+<p>For this lab, I will explain my methodology on the HTTPS traffic questions, which I think are the most relevant in this exercise, thus I will not deal with questions with <code>dns.pcapng</code> for instance.</p>
+<p>This part deals with HTTPS traffic, through TLS encryption then. The lab gave us an NSS Key Log Format file, which I recognized with its first line <code># SSL/TLS secrets log file, generated by NSS</code> which is meant to be added to Wireshark or any tool alike, to decrypt these encrypted packets. Indeed, in the NSS file, there are secrets such as <code>SERVER_TRAFFIC_SECRET_0</code> or <code>CLIENT_HANDSHAKE_TRAFFIC_SECRET</code>. For more information on how to decrypt HTTPS traffic with NSS Key Log Format files, please check <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format" target="_blank">this Mozilla documentation</a>.</p>
+<p>Once the traffic is decrypted, I started right away to analyze these packets.</p>
+<h4 id="q32-file-httpspcapng---what-has-been-added-to-web-interaction-with-web01fruitincxyz">Q32) File https.pcapng - What has been added to web interaction with web01.fruitinc.xyz?</h4>
+<p>Okay, let&apos;s focus on packets dealing with the host <code>web01.fruitinc.xyz</code> then. I used this filter: <code>http.host == &quot;web01.fruitinc.xyz&quot;</code></p>
+<p>The packets 675 and 707 matched my filter, I follow 675&apos;s HTTP stream to get more information, as at the moment I don&apos;t have anything. I noticed then a weird HTTP header, known as <code>flag</code>. Its value is the answer: <code>y2*Lg4cHe@Ps</code></p>
+<p><img src="images/http_flag_header.png" alt="HTTP &quot;flag&quot; header"></p>
+<h4 id="q33-file-httpspcapng---what-is-the-name-of-the-photo-that-is-viewed-in-slack">Q33) File https.pcapng - What is the name of the photo that is viewed in slack?</h4>
+<p>After applying a <code>http</code> filter, I scrolled a bit to understand what requests have been done, and one occurred to a weird JPG picture. Turns out its name is the answer: <code>get_a_new_phone_today__720.jpg</code>.</p>
+<p><img src="images/photography_name_http.png" alt="Photography name in HTTP request"></p>
+<h4 id="q34-file-httpspcapng---what-is-the-username-and-password-to-login-to-19216821-format-usernamepassword-without-quotes">Q34) File https.pcapng - What is the username and password to login to 192.168.2.1? Format: &apos;username:password&apos; without quotes.</h4>
+<p>I guessed that the <code>192.168.2.1</code> is the remote server, I will use this information in my filter then. Also, authentication is often dealt with POST requests, hence with forms, using most of the time the <code>application/ x-www-form-urlencoded</code> value in the Content-Type header, like explained in <a href="https://medium.com/@rajajawahar77/content-type-x-www-form-urlencoded-form-data-and-json-e17c15926c69" target="_blank">this Medium article</a>. Thereby, my filter is the following: <code>urlencoded-form and ip.dst==192.168.2.1</code></p>
+<p>It matches some packets, I inspect the first one, the 937th, and can observe the admin&apos;s credentials easily: <code>admin:Ac5R4D9iyqD5bSh</code>.</p>
+<p><img src="images/admin_credentials_192.168.2.1.png" alt="Admin credentials to 192.168.2.1"></p>
+<h4 id="q35-file-httpspcapng---what-is-the-certstatus-for-the-certificate-with-a-serial-number-of-07752cebe5222fcf5c7d2038984c5198">Q35) File https.pcapng - What is the certStatus for the certificate with a serial number of 07752cebe5222fcf5c7d2038984c5198?</h4>
+<p>Okay, the only information I have about the certificate is its serial number, let&apos;s use that! After using a template from a random certificate, I designed my filter this way: <code>ber.64bit_uint_as_bytes == 07:75:2c:eb:e5:22:2f:cf:5c:7d:20:38:98:4c:51:98</code> after doing a little trick with <code>sed</code>:</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;07752cebe5222fcf5c7d2038984c5198&apos;</span> | sed <span class="hljs-string">&apos;s/../&amp;:/g;s/:$//&apos;</span>
+07:75:2c:eb:e5:22:2f:cf:5c:7d:20:38:98:4c:51:98
+</code></pre>
+<p>I take a random <code>Online Certificate Status Protocol</code> (OCSP) and inspect its <code>certStatus</code> value which is <code>good</code>.</p>
+<p><img src="images/certStatus_good.png" alt="certStatus as good"></p>
+<h4 id="36-file-httpspcapng---what-is-the-email-of-someone-who-needs-to-change-their-password">36) File https.pcapng - What is the email of someone who needs to change their password?</h4>
+<p>Same idea than Q34) without the remote server information, hence my filter is simply <code>urlencoded-form</code>. By having a look at different decrypted traffic, I found an email, along with a password, in a form, seems to be my winner: <code>Jim.Tomato@fruitinc.xyz</code></p>
+<p><img src="images/email_change_password.png" alt="Email change password"></p>
+<h4 id="37-file-httpspcapng---a-service-is-assigned-to-an-interface-what-is-the-interface-and-what-is-the-service-format-interfacenameservicename">37) File https.pcapng - A service is assigned to an interface. What is the interface, and what is the service? Format: interface_name:service_name</h4>
+<p>I guess this is about the server, let&apos;s focus on <code>192.168.2.1</code> as the destination IP address. Then, I can use either with that a <code>http</code> or <code>http2</code> filter, as I guess that the service is reachable through HTTP, as I investigate a file called <code>https.pcapng</code>.</p>
+<p>I tried this filter first: <code>http and ip.dst==192.168.2.1</code> and found nothing interesting. Then, with this one: <code>http2 and ip.dst==192.168.2.1</code> I noticed the packets 1076 and 1107 dealing with some GET and POST to <code>/services_ntpd.php</code>. It seems like a service daemon: NTP daemon. Let&apos;s be sure of that by searching for the NTP protocol online. I found <a href="https://fr.wikipedia.org/wiki/Network_Time_Protocol" target="_blank">that definition</a> which makes sense.</p>
+<p>I now need to know on what interface it is binded. I opened the next packets, still with my former filter, and found out in packet 1108 some interesting entries: </p>
+<p><img src="images/interface_name.png" alt="Interface name"></p>
+<p>The interface name is <code>lan</code> then!</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../DFIR/honeybot.html" class="navigation navigation-prev " aria-label="Previous page: HoneyBOT (DFIR & malware analysis, 1700)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../SocVel/" class="navigation navigation-next " aria-label="Next page:   SocVel">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"WireDive (forensic, 6275)","level":"1.5.2","depth":2,"next":{"title":"  SocVel","level":"1.6","depth":1,"path":"2021/SocVel/README.md","ref":"2021/SocVel/README.md","articles":[{"title":"Losprys (DFIR, 3000)","level":"1.6.1","depth":2,"path":"2021/SocVel/DFIR/losprys.md","ref":"2021/SocVel/DFIR/losprys.md","articles":[]},{"title":"DikBek (DFIR, 3000)","level":"1.6.2","depth":2,"path":"2021/SocVel/DFIR/dikbek.md","ref":"2021/SocVel/DFIR/dikbek.md","articles":[]},{"title":"Pooptoria (DFIR, 3000)","level":"1.6.3","depth":2,"path":"2021/SocVel/DFIR/pooptoria.md","ref":"2021/SocVel/DFIR/pooptoria.md","articles":[]}]},"previous":{"title":"HoneyBOT (DFIR & malware analysis, 1700)","level":"1.5.1","depth":2,"path":"2021/CyberDefenders/DFIR/honeybot.md","ref":"2021/CyberDefenders/DFIR/honeybot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax@https://github.com/algorithm-archivists/plugin-mathjax"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6.1"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","honkit":">= 3.0.0","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"exti0p's realm","gitbook":"*"},"file":{"path":"2021/CyberDefenders/forensic/wiredive.md","mtime":"2022-05-03T20:02:25.577Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-03T20:29:13.453Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

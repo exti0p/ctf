@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "gitbook-plugin-api-language-selector": "git+https://github.com/algorithm-archivists/gitbook-plugin-api-language-selector.git",
+    "gitbook-plugin-mathjax": "git+https://github.com/algorithm-archivists/plugin-mathjax.git",
+    "honkit": "^3.6.17"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "honkit build",
+    "serve": "honkit serve"
+  }
+}

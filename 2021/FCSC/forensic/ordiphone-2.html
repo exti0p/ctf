@@ -1,0 +1,807 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Ordiphone2 (forensic, 197) · exti0p's realm</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.7.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../NorzhCTF/" />
+    
+    
+    <link rel="prev" href="ordiphone-0.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    2021
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../CSAW-CTF-Quals/">
+            
+                <a href="../../CSAW-CTF-Quals/">
+            
+                    
+                      CSAW CTF Quals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../CSAW-CTF-Quals/ics/tripping_breakers.html">
+            
+                <a href="../../CSAW-CTF-Quals/ics/tripping_breakers.html">
+            
+                    
+                    Tripping Breakers (malware analysis, 481)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../FwordCTF/">
+            
+                <a href="../../FwordCTF/">
+            
+                    
+                      FwordCTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../FwordCTF/web/parrotox.html">
+            
+                <a href="../../FwordCTF/web/parrotox.html">
+            
+                    
+                    ParrotOx (web, 997)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../CyberDefenders/">
+            
+                <a href="../../CyberDefenders/">
+            
+                    
+                      CyberDefenders
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../CyberDefenders/DFIR/honeybot.html">
+            
+                <a href="../../CyberDefenders/DFIR/honeybot.html">
+            
+                    
+                    HoneyBOT (DFIR & malware analysis, 1700)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../CyberDefenders/forensic/wiredive.html">
+            
+                <a href="../../CyberDefenders/forensic/wiredive.html">
+            
+                    
+                    WireDive (forensic, 6275)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../SocVel/">
+            
+                <a href="../../SocVel/">
+            
+                    
+                      SocVel
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../SocVel/DFIR/losprys.html">
+            
+                <a href="../../SocVel/DFIR/losprys.html">
+            
+                    
+                    Losprys (DFIR, 3000)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../SocVel/DFIR/dikbek.html">
+            
+                <a href="../../SocVel/DFIR/dikbek.html">
+            
+                    
+                    DikBek (DFIR, 3000)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../SocVel/DFIR/pooptoria.html">
+            
+                <a href="../../SocVel/DFIR/pooptoria.html">
+            
+                    
+                    Pooptoria (DFIR, 3000)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../">
+            
+                <a href="../">
+            
+                    
+                      FCSC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="ordiphone-0.html">
+            
+                <a href="ordiphone-0.html">
+            
+                    
+                    Ordiphone0 (forensic, 42)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="ordiphone-2.html">
+            
+                <a href="ordiphone-2.html">
+            
+                    
+                    Ordiphone2 (forensic, 197)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../NorzhCTF/">
+            
+                <a href="../../NorzhCTF/">
+            
+                    
+                      NorzhCTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../NorzhCTF/airport_hall/triskel-3.html">
+            
+                <a href="../../NorzhCTF/airport_hall/triskel-3.html">
+            
+                    
+                    Triskel 3 (web, 49)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../NorzhCTF/airport_hall/triskel-4.html">
+            
+                <a href="../../NorzhCTF/airport_hall/triskel-4.html">
+            
+                    
+                    Triskel 4 (pentest & misc, 20)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../NorzhCTF/developer_corner/tea_time.html">
+            
+                <a href="../../NorzhCTF/developer_corner/tea_time.html">
+            
+                    
+                    Tea time (pentest, 20)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../2020/">
+            
+                <a href="../../../2020/">
+            
+                    
+                    2020
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../2020/FwordCTF/">
+            
+                <a href="../../../2020/FwordCTF/">
+            
+                    
+                      FwordCTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../../2020/FwordCTF/web/jailoo-warmup.html">
+            
+                <a href="../../../2020/FwordCTF/web/jailoo-warmup.html">
+            
+                    
+                    Jailoo Warmup (web, 442)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Ordiphone2 (forensic, 197)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ordiphone2">Ordiphone2</h1>
+<h2 id="forensic-197-points">Forensic, 197 points</h2>
+<h3 id="description">Description</h3>
+<p>Pour avancer sur cette investigation, vous devez analyser cette capture mémoire et une copie du stockage interne d&apos;un téléphone Android utilisé par un cybercriminel.</p>
+<p>Votre mission est de retrouver les secrets que ce dernier stocke sur son téléphone.</p>
+<p><code>lime.dump.7z</code> (180MB) : <a href="https://files.france-cybersecurity-challenge.fr/dl/android/lime.dump.7z" target="_blank">https://files.france-cybersecurity-challenge.fr/dl/android/lime.dump.7z</a></p>
+<p><code>sdcard.zip</code> (17MB) : <a href="https://files.france-cybersecurity-challenge.fr/dl/android/sdcard.zip" target="_blank">https://files.france-cybersecurity-challenge.fr/dl/android/sdcard.zip</a></p>
+<ul>
+<li>SHA256(<code>lime.dump</code>) = <code>21575c12bcb8d67e6ca269bac6c3d360847b16922f2f44b0b360790862afe46d</code>.</li>
+<li>SHA256(<code>sdcard.zip</code>) = <code>e19e449c3bc7a9d04cc7f665fb494d857b9f019d8fec2ba08ab40c117fa2f8d8</code>.</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<p>Now I am looking for some <code>secrets</code>. Remember from <a href="ordiphone-0.html">Ordiphone 0</a>, I found some interesting bash history which includes a <code>very_secret</code> directory, and even a weird string which can possibly a password: </p>
+<pre><code class="lang-bash">$ strings lime.dump | grep <span class="hljs-string">&apos;insmod /sdcard/lime.ko &quot;path=/sdcard/lime.dump format=lime&quot;&apos;</span> -B 5 -A 5
+
+p33larudsb0jrflbmr90l6ikdbb4lcdaym7k5s3a6u28rx8sut7kp1347h6c4v78
+mkdir /sdcard/very_secret
+mount /dev/mapper/secrets /sdcard/very_secret
+<span class="hljs-built_in">cd</span> /sdcard/very_secret
+sh script.sh
+insmod /sdcard/lime.ko <span class="hljs-string">&quot;path=/sdcard/lime.dump format=lime&quot;</span>
+audit(1616526782.263:7186): avc:  denied  { write } <span class="hljs-keyword">for</span>  pid=1849 comm=<span class="hljs-string">&quot;system_server&quot;</span> name=<span class="hljs-string">&quot;timerslack_ns&quot;</span> dev=<span class="hljs-string">&quot;proc&quot;</span> ino=32400 scontext=u:r:system_server:s0 tcontext=u:r:untrusted_app:s0:c512,c768 tclass=file permissive=0ive=0
+Using -iter or -pbkdf2 would be better.
+generic_x86_64:/sdcard/very_secret <span class="hljs-comment"># insmod /sdcard/lime.ko &quot;path=/sdcard/lime.dump format=lime&quot;</span>
+[...]
+</code></pre>
+<p>After unzipping <code>sdcard.zip</code>, I want to have a look at the files in it:</p>
+<pre><code class="lang-bash">$ tree -l
+
+├── Alarms
+├── Android
+│   └── data
+│       ├── com.google.android.apps.maps
+│       │   ├── cache
+│       │   │   └── cache_r.m
+│       │   ├── files
+│       │   └── testdata
+│       ├── com.google.android.apps.nexuslauncher
+│       │   └── files
+│       ├── com.google.android.gms
+│       │   └── files
+│       ├── com.google.android.googlequicksearchbox
+│       │   └── files
+│       │       ├── download_cache
+│       │       └── pending_blobs
+│       └── com.google.android.youtube
+│           ├── cache
+│           │   └── exo
+│           │       └── 6861aa5b4dd5f9fd.uid
+│           └── files
+├── DCIM
+├── Download
+├── Movies
+├── Music
+├── Notifications
+├── Pictures
+├── Podcasts
+├── Ringtones
+└── secrets
+
+27 directories, 3 files
+</code></pre>
+<p>Let&apos;s get a bit more information about these 3 files:</p>
+<ul>
+<li><code>6861aa5b4dd5f9fd.uid</code>: empty.</li>
+<li><code>cache_r.m</code>: 20 Mo.</li>
+<li><code>secrets</code>: 50 Mo.</li>
+</ul>
+<p>The <code>secrets</code> file looks promising, but before getting to it, let&apos;s have a quick look on <code>cache_r.m</code>. I extracted from it several non null bytes:</p>
+<pre><code class="lang-bash">0000 0000 0000 0000 0000 0000 0000 0000
+ecbb 4b55 0000 0000 0000 0000 0000 0000
+0000 0000 ecbb 4b55 0000 0000 0000 0000
+0000 0000 0000 0000 ecbb 4b55 0000 0000
+0000 0000 0000 0000 0000 0000 ecbb 4b55
+
+ecbb 4b55
+
+0000 0000 0000 0000 0000 0000 67bb af86
+
+67bb af86
+
+0000 0016 0000 002d 0000 2000 0000 0004
+0000 0080 0000 0000 0000 0001 7860 7e73
+c000 0265 6e00 0000 0095 7d31 7d00 0000
+
+0016 002d 2000 004 0080 0001 7860 7e73 c000 0265 6e00 0095 7d31 7d00
+</code></pre>
+<p>Finally, it led me to nothing. Let&apos;s get back to <code>secrets</code>.</p>
+<pre><code class="lang-bash">$ file secrets 
+
+secrets: LUKS encrypted file, ver 2 [, , sha256] UUID: 26040e95-2800-4129-be0f-4879b4579f22
+</code></pre>
+<p>Interesting stuff, LUKS2 encrypted file, which is basically not bruteforceable, at least easily. I probably then have the password for it. I actually have a possible one <code>p33larudsb0jrflbmr90l6ikdbb4lcdaym7k5s3a6u28rx8sut7kp1347h6c4v78</code>, let&apos;s try it:</p>
+<pre><code class="lang-bash">$ cryptsetup open --<span class="hljs-built_in">type</span> luks secrets fcscSecrets
+$ mount /dev/mapper/fcscSecrets /mnt
+</code></pre>
+<p>I successfully mounted the partition, I get two files:</p>
+<ul>
+<li><code>flag.enc</code>.</li>
+<li><code>script.sh</code>.</li>
+</ul>
+<p>I directly want to know what kind of file is <code>flag.enc</code>:</p>
+<pre><code class="lang-bash">$ file flag.enc
+
+flag.enc: openssl enc<span class="hljs-string">&apos;d data with salted password
+</span></code></pre>
+<p>Now I am sure that I can&apos;t use any rainbow tables.</p>
+<p>Let&apos;s understand <code>script.sh</code> and how I could possibly decrypt this <code>flag.enc</code>:</p>
+<pre><code class="lang-bash">aleatoire=$(cat /dev/urandom | head | xxd -p -l 30 | tr -d <span class="hljs-string">&quot; &quot;</span>)
+<span class="hljs-built_in">echo</span> <span class="hljs-variable">$aleatoire</span> &gt; /dev/kmsg
+aleatoirebis=<span class="hljs-string">&quot;$aleatoire<span class="hljs-subst">$(pidof adbd | tr -d &apos; &apos;)</span><span class="hljs-subst">$(pidof vold | tr -d &apos; &apos;)</span><span class="hljs-subst">$(pidof logd | tr -d &apos; &apos;)</span>&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-variable">$aleatoirebis</span> | /data/data/com.termux/files/usr/bin/openssl aes-256-cbc -<span class="hljs-keyword">in</span> flag -out flag.enc -pass stdin
+/data/data/com.termux/files/usr/bin/shred flag
+rm flag
+</code></pre>
+<p>After some reading and trying this out locally, I understand that <code>$aleatoire</code> is a 60 long hex digits char and and that it is concatenated with the PIDs of <code>abdb</code>,<code>vold</code> and <code>logd</code> processes to create the <code>flag.enc</code> encryption password. </p>
+<p>Thereby, I crafted a little regex to find <code>$aleatoire</code> matches in our dump: <code>[0-9a-f]{60}</code>. Let&apos;s catch some matches:</p>
+<pre><code class="lang-bash">$ strings stringsOutput |grep -P <span class="hljs-string">&apos;^[0-9a-f]{60}$&apos;</span>
+
+387e8985bd75be1b922eddaadde934e70465424ab4b0c3da98763c094432
+387e8985bd75be1b922eddaadde934e70465424ab4b0c3da98763c094432
+4100038121f20004150605040710000041637469766174653a64743d3135
+4100038121f20004150605040710000041637469766174653a64743d3135
+4100038121f20004150605040710000041637469766174653a64743d3135
+4100038121f20004150605040710000041637469766174653a64743d3135
+4100038121f20004150605040710000041637469766174653a64743d3135
+4100038121f20004150605040710000041637469766174653a64743d3135
+4100038121f20004150605040710000041637469766174653a64743d3135
+4100038121f20004150605040710000041637469766174653a64743d3135
+4100038121f20004150605040710000041637469766174653a64743d3135
+4100038121f20004150605040710000041637469766174653a64743d3135
+</code></pre>
+<p>After removing duplicates, I get:</p>
+<pre><code class="lang-bash">387e8985bd75be1b922eddaadde934e70465424ab4b0c3da98763c094432
+4100038121f20004150605040710000041637469766174653a64743d3135
+</code></pre>
+<p>I have two candidates then, it is sufficient enough. Let&apos;s catch these PIDs now! Let&apos;s search for <code>adbd</code> in the memory dump:</p>
+<pre><code class="lang-bash">$ strings lime.dump | grep <span class="hljs-string">&apos;adbd&apos;</span>
+
+[...]
+to free 81580kB on behalf of <span class="hljs-string">&apos;adbd&apos;</span> (1581) because
+[...]
+</code></pre>
+<p>This entry is interesting, let&apos;s now look around:</p>
+<pre><code class="lang-bash">$ strings lime.dump | grep <span class="hljs-string">&apos;adbd&apos;</span> -B 5 -A 5
+
+[...]
+cache 26340kB is below <span class="hljs-built_in">limit</span> 73728kB <span class="hljs-keyword">for</span> oom_score_adj 0
+to free 88060kB on behalf of <span class="hljs-string">&apos;cryptsetup&apos;</span> (4458) because
+cache 17288kB is below <span class="hljs-built_in">limit</span> 73728kB <span class="hljs-keyword">for</span> oom_score_adj 0
+to free 82352kB on behalf of <span class="hljs-string">&apos;cryptsetup&apos;</span> (4458) because
+cache 15780kB is below <span class="hljs-built_in">limit</span> 73728kB <span class="hljs-keyword">for</span> oom_score_adj 0
+to free 81580kB on behalf of <span class="hljs-string">&apos;adbd&apos;</span> (1581) because
+adj 0
+cache -5240kB is below <span class="hljs-built_in">limit</span> 73728kB <span class="hljs-keyword">for</span> oom_score_adj 0
+to free 82576kB on behalf of <span class="hljs-string">&apos;adbd&apos;</span> (1581) because
+_adj 0
+cache -26472kB is below <span class="hljs-built_in">limit</span> 73728kB <span class="hljs-keyword">for</span> oom_score_adj 0
+to free 74484kB on behalf of <span class="hljs-string">&apos;cryptsetup&apos;</span> (4458) because
+cache -27304kB is below <span class="hljs-built_in">limit</span> 73728kB <span class="hljs-keyword">for</span> oom_score_adj 0
+to free 77896kB on behalf of <span class="hljs-string">&apos;cryptsetup&apos;</span> (4458) because
+[...]
+</code></pre>
+<p>It definitely is <code>adbd</code>&apos;s PID. Let&apos;s look for <code>/proc/1581/</code> now:</p>
+<pre><code class="lang-bash">$ strings lime.dump | grep <span class="hljs-string">&apos;/proc/1581/&apos;</span> -B 5 -A 5
+
+/proc/1586/cmdline
+mdnsd
+/proc/1586/<span class="hljs-built_in">stat</span>
+/proc/1586/task
+adbd
+/proc/1581/cmdline
+adbd
+/proc/1581/<span class="hljs-built_in">stat</span>
+/proc/1581/task
+vold
+/proc/1539/cmdline
+vold
+/proc/1539/<span class="hljs-built_in">stat</span>
+/proc/1539/task
+</code></pre>
+<p>I can assume that as <code>/proc/1581/cmdline</code> gives us <code>adbd</code>&apos;s PID, that <code>/proc/1539/cmdline</code> is doing the same thing. Hence only <code>logd</code>&apos;s PID left to go! Let&apos;s dig deeper after these lines:</p>
+<pre><code class="lang-bash">$ strings lime.dump | grep <span class="hljs-string">&apos;/proc/1539/&apos;</span> -A 30
+
+[...]
+/proc/1529/cmdline
+logd
+[...]
+</code></pre>
+<p>I retrieved the three PIDs! To sum up:</p>
+<ul>
+<li><code>$aleatoire</code>: <code>387e8985bd75be1b922eddaadde934e70465424ab4b0c3da98763c094432</code> or <code>4100038121f20004150605040710000041637469766174653a64743d3135</code>.</li>
+<li><code>adbd</code>: <code>1581</code>.</li>
+<li><code>vold</code>: <code>1539</code>.</li>
+<li><code>logd</code>: <code>1529</code>.</li>
+</ul>
+<p>Which makes <code>387e8985bd75be1b922eddaadde934e70465424ab4b0c3da98763c094432158115391529</code> or <code>4100038121f20004150605040710000041637469766174653a64743d3135158115391529</code> our possible decryption key.</p>
+<p>After trying the first one, I check the flag file format:</p>
+<pre><code class="lang-bash">$ file flag
+
+flag: PNG image data, 612 x 408, 8-bit/color RGBA, non-interlaced
+</code></pre>
+<p>And I flag <code>FCSC{ba5dc3f62c971c212133bb45b76084732c86936b76a026dc89c7b34fd3df29ae}</code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ordiphone-0.html" class="navigation navigation-prev " aria-label="Previous page: Ordiphone0 (forensic, 42)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../NorzhCTF/" class="navigation navigation-next " aria-label="Next page:   NorzhCTF">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Ordiphone2 (forensic, 197)","level":"1.7.2","depth":2,"next":{"title":"  NorzhCTF","level":"1.8","depth":1,"path":"2021/NorzhCTF/README.md","ref":"2021/NorzhCTF/README.md","articles":[{"title":"Triskel 3 (web, 49)","level":"1.8.1","depth":2,"path":"2021/NorzhCTF/airport_hall/triskel-3.md","ref":"2021/NorzhCTF/airport_hall/triskel-3.md","articles":[]},{"title":"Triskel 4 (pentest & misc, 20)","level":"1.8.2","depth":2,"path":"2021/NorzhCTF/airport_hall/triskel-4.md","ref":"2021/NorzhCTF/airport_hall/triskel-4.md","articles":[]},{"title":"Tea time (pentest, 20)","level":"1.8.3","depth":2,"path":"2021/NorzhCTF/developer_corner/tea_time.md","ref":"2021/NorzhCTF/developer_corner/tea_time.md","articles":[]}]},"previous":{"title":"Ordiphone0 (forensic, 42)","level":"1.7.1","depth":2,"path":"2021/FCSC/forensic/ordiphone-0.md","ref":"2021/FCSC/forensic/ordiphone-0.md","articles":[]},"dir":"ltr"},"config":{"plugins":["mathjax@https://github.com/algorithm-archivists/plugin-mathjax"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6.1"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","honkit":">= 3.0.0","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"exti0p's realm","gitbook":"*"},"file":{"path":"2021/FCSC/forensic/ordiphone-2.md","mtime":"2022-05-03T20:02:25.578Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-03T20:29:13.453Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

